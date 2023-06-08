@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void initview() {
 
-        edtfname = findViewById(R.id.edtfname);
-        edtlname = findViewById(R.id.edtlname);
-        edtemail = findViewById(R.id.edtemail);
+        edtfname = findViewById(R.id.edtFirstname);
+        edtlname = findViewById(R.id.edtLastName);
+        edtemail = findViewById(R.id.edtEmailid);
         edtadd = findViewById(R.id.edtadd);
         edtphone = findViewById(R.id.edtphone);
         edtschool = findViewById(R.id.edtschool);

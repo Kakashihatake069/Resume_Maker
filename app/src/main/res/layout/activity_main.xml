@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -51,100 +52,160 @@
 
             </TextView>
 
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_margin="5dp"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:weightSum="2">-->
+
+
+            <!--                <EditText-->
+            <!--                    android:id="@+id/edtfname"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:background="@drawable/cornerbuttonbg"-->
+            <!--                    android:hint="First name"-->
+            <!--                    android:imeOptions="actionNext"-->
+            <!--                    android:padding="5dp"-->
+            <!--                    android:singleLine="true">-->
+
+            <!--                </EditText>-->
+
+            <!--                <EditText-->
+            <!--                    android:id="@+id/edtlname"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:background="@drawable/cornerbuttonbg"-->
+            <!--                    android:hint="Last Name"-->
+            <!--                    android:imeOptions="actionNext"-->
+            <!--                    android:paddingHorizontal="5dp"-->
+            <!--                    android:paddingVertical="5dp"-->
+            <!--                    android:singleLine="true">-->
+
+            <!--                </EditText>-->
+
+
+            <!--            </LinearLayout>-->
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:orientation="horizontal"
-                android:weightSum="2">
+                android:layout_height="wrap_content">
 
-
-                <EditText
-                    android:id="@+id/edtfname"
-                    android:layout_width="0dp"
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/cornerbuttonbg"
-                    android:hint="First name"
-                    android:imeOptions="actionNext"
-                    android:padding="5dp"
-                    android:singleLine="true">
+                    android:hint="First Name"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/colorPrimaryDark"
+                    app:shapeAppearance="@style/Rounded">
 
-                </EditText>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtFirstname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="text" />
 
-                <EditText
-                    android:id="@+id/edtlname"
-                    android:layout_width="0dp"
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="@dimen/_30sdp"
                     android:layout_weight="1"
-                    android:background="@drawable/cornerbuttonbg"
                     android:hint="Last Name"
-                    android:imeOptions="actionNext"
-                    android:paddingHorizontal="5dp"
-                    android:paddingVertical="5dp"
-                    android:singleLine="true">
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/colorPrimaryDark"
+                    app:shapeAppearance="@style/Rounded">
 
-                </EditText>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="text" />
 
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/edtemail"
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_below="@+id/loutname"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/cornerbuttonbg"
-                android:hint="Email id"
-                android:imeOptions="actionNext"
-                android:paddingHorizontal="15dp"
-                android:paddingVertical="5dp"
-                android:singleLine="true">
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:hint="Email"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/colorPrimaryDark"
+                app:shapeAppearance="@style/Rounded">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmailid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    tools:ignore="TouchTargetSizeCheck" />
 
-            </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/edtadd"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_below="@+id/loutname"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/cornerbuttonbg"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="@dimen/_10sdp"
                 android:hint="Address"
-                android:imeOptions="actionNext"
-                android:paddingHorizontal="15dp"
-                android:paddingVertical="5dp"
-                android:singleLine="true">
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/colorPrimaryDark"
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtadd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-            </EditText>
-
-            <EditText
-                android:id="@+id/edtphone"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/call"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_below="@+id/loutname"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/cornerbuttonbg"
-                android:hint="Phone number"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:paddingHorizontal="15dp"
-                android:paddingVertical="5dp">
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:hint="Phone Number"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/colorPrimaryDark"
+                app:shapeAppearance="@style/Rounded">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    tools:ignore="TouchTargetSizeCheck" />
 
-            </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -152,9 +213,10 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:text="Gender"
-                android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textSize="15dp" />
+                android:textSize="15dp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -199,10 +261,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
-                android:textStyle="bold"
-                android:textColor="@color/black"
                 android:text="Martial status"
-                android:textSize="15dp" />
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -314,21 +377,21 @@
 
                 <TextView
                     android:id="@+id/txtschool"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_weight="2"
-                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:text="School"
                     android:textColor="@color/black"
-                    android:text="School">
+                    android:textStyle="bold">
 
                 </TextView>
 
                 <EditText
                     android:id="@+id/edtschool"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
+                    android:layout_weight="1.5"
                     android:background="@drawable/cornerbuttonbg"
                     android:hint="School name"
                     android:imeOptions="actionNext"
@@ -339,7 +402,7 @@
 
                 <EditText
                     android:id="@+id/edtmarks1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
                     android:background="@drawable/cornerbuttonbg"
@@ -364,7 +427,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="170dp"
-                    android:layout_weight="0.4"
+                    android:layout_weight="1"
                     android:background="@drawable/cornerbuttonbg"
                     android:hint="Passing year"
                     android:imeOptions="actionNext"
@@ -399,21 +462,21 @@
                 android:weightSum="3">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_weight="1.7"
-                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:text="High School"
                     android:textColor="@color/black"
-                    android:text="High School">
+                    android:textStyle="bold">
 
                 </TextView>
 
                 <EditText
                     android:id="@+id/edthighschool"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.7"
+                    android:layout_weight="1.5"
                     android:background="@drawable/cornerbuttonbg"
                     android:hint="High School"
 
@@ -427,9 +490,9 @@
 
                 <EditText
                     android:id="@+id/edtmarks2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.6"
+                    android:layout_weight="0.5"
                     android:background="@drawable/cornerbuttonbg"
                     android:hint="Marks"
                     android:imeOptions="actionNext"
@@ -462,9 +525,9 @@
 
                 <EditText
                     android:id="@+id/edtpercentage2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="0dp"
+
                     android:layout_weight="0.5"
                     android:background="@drawable/cornerbuttonbg"
                     android:hint="%"
@@ -486,21 +549,21 @@
                 android:weightSum="3">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_weight="2"
-                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:text="Collage"
                     android:textColor="@color/black"
-                    android:text="Collage">
+                    android:textStyle="bold">
 
                 </TextView>
 
                 <EditText
                     android:id="@+id/edtcollage"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
+                    android:layout_weight="1.5"
                     android:background="@drawable/cornerbuttonbg"
                     android:hint="Collage name"
                     android:imeOptions="actionNext"
@@ -511,7 +574,7 @@
 
                 <EditText
                     android:id="@+id/edtmarks3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
                     android:background="@drawable/cornerbuttonbg"
@@ -532,10 +595,10 @@
 
                 <EditText
                     android:id="@+id/edtyear3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="170dp"
-                    android:layout_weight="0.4"
+                    android:layout_weight="1"
                     android:background="@drawable/cornerbuttonbg"
                     android:hint="Passing year"
                     android:imeOptions="actionNext"
@@ -546,9 +609,9 @@
 
                 <EditText
                     android:id="@+id/edtpercentage3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="0dp"
+
                     android:layout_weight="0.5"
                     android:background="@drawable/cornerbuttonbg"
                     android:hint="%"
@@ -585,9 +648,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="30dp"
-                    android:textStyle="bold"
+                    android:text="Organization"
                     android:textColor="@color/black"
-                    android:text="Organization">
+                    android:textStyle="bold">
 
                 </TextView>
 
@@ -595,7 +658,8 @@
 
                     android:id="@+id/edtorganization"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:inputType="text">>
 
                 </EditText>
 
@@ -613,16 +677,17 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="30dp"
-                    android:textStyle="bold"
+                    android:text="Designation"
                     android:textColor="@color/black"
-                    android:text="Designation">
+                    android:textStyle="bold">
 
                 </TextView>
 
                 <EditText
                     android:id="@+id/edtdesignation"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:inputType="text">>
 
                 </EditText>
 
@@ -640,16 +705,17 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="30dp"
-                    android:textStyle="bold"
+                    android:text="Role"
                     android:textColor="@color/black"
-                    android:text="Role">
+                    android:textStyle="bold">
 
                 </TextView>
 
                 <EditText
                     android:id="@+id/edtrole"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:inputType="text">
 
                 </EditText>
 
@@ -678,10 +744,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
                     android:layout_marginRight="30dp"
-                    android:text="Interested In">
+                    android:text="Interested In"
+                    android:textColor="@color/black"
+                    android:textStyle="bold">
 
                 </TextView>
 
@@ -705,10 +771,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
                     android:layout_marginRight="30dp"
-                    android:text="Interested In">
+                    android:text="Interested In"
+                    android:textColor="@color/black"
+                    android:textStyle="bold">
 
                 </TextView>
 
@@ -731,11 +797,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="30dp"
-                    android:text="Interested In">
+                    android:text="Interested In"
+                    android:textColor="@color/black"
+                    android:textStyle="bold">
 
                 </TextView>
 

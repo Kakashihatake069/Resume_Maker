@@ -11,6 +11,11 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">#B6D6D2</item>
+
+        <style name="Rounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSize">16dp</item>
+        </style>
         <!-- Customize your theme here. -->
     </style>
 </resources>
